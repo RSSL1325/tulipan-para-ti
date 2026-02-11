@@ -1,9 +1,18 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para ti amor❤️</title>
+=======
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Me perdonas? ❤️</title>
+
+>>>>>>> 376b5db (Proyecto Me Perdonas)
 <style>
 body{
     margin:0;
@@ -12,6 +21,7 @@ body{
     justify-content:center;
     align-items:center;
     flex-direction:column;
+<<<<<<< HEAD
     background: radial-gradient(circle at bottom, #200020, #000);
     font-family: 'Segoe UI', sans-serif;
     overflow:hidden;
@@ -158,12 +168,62 @@ h1{
         opacity:1;
         transform: translateY(0);
     }
+=======
+    background: radial-gradient(circle at top, #ffd6e8, #ff8fb1);
+    font-family: 'Segoe UI', sans-serif;
+    overflow:hidden;
+    text-align:center;
+}
+
+h1{
+    font-size:42px;
+    color:#b3005e;
+}
+
+.botones{
+    margin-top:30px;
+    position:relative;
+    width:320px;
+    height:200px;
+    border-radius:20px;
+}
+
+button{
+    padding:12px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.si{
+    position: absolute;
+    background:#ff4f9a;
+    color:white;
+    left: 10px;
+}
+
+.no{
+    position: absolute;
+    background:#ff4f9a;
+    color:white;
+    left: 180px;
+}
+
+.mensajeFinal{
+    margin-top:30px;
+    font-size:22px;
+    color:#8b004b;
+    opacity:0;
+    transition:opacity 1s ease;
+>>>>>>> 376b5db (Proyecto Me Perdonas)
 }
 </style>
 </head>
 
 <body>
 
+<<<<<<< HEAD
 <h1>Para ti ❤️</h1>
 
 <div class="escena">
@@ -192,3 +252,46 @@ h1{
 
 </body>
 </html>
+=======
+<h1>¿Me perdonas? 🥺❤️</h1>
+
+<div class="botones" id="contenedor">
+    <button class="si" onclick="perdonado()">Sí 💖</button>
+    <button class="no" onmouseover="mover(this)">No 😒</button>
+</div>
+
+<p class="mensajeFinal" id="final">
+    Prometo hacerlo mejor, porque tú vales todo 💕
+</p>
+
+<script>
+
+function mover(boton){
+
+    const contenedor = document.getElementById("contenedor");
+
+    const anchoContenedor = contenedor.clientWidth;
+    const altoContenedor = contenedor.clientHeight;
+
+    const anchoBoton = boton.offsetWidth;
+    const altoBoton = boton.offsetHeight;
+
+    const maxX = anchoContenedor - anchoBoton;
+    const maxY = altoContenedor - altoBoton;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    boton.style.left = x + "px";
+    boton.style.top = y + "px";
+}
+
+function perdonado(){
+    document.getElementById("final").style.opacity = "1";
+}
+
+</script>
+
+</body>
+</html>
+>>>>>>> 376b5db (Proyecto Me Perdonas)
