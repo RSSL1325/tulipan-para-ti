@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti amor❤️</title>
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background: radial-gradient(circle at bottom, #200020, #000);
+    font-family: 'Segoe UI', sans-serif;
+    overflow:hidden;
+}
+
+h1{
+    color:#ff6fa5;
+    margin-bottom:40px;
+    letter-spacing:2px;
+}
+
+/* ====== CONTENEDOR ====== */
+.escena{
+    position:relative;
+    width:250px;
+    height:450px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+/* ====== TULIPÁN ====== */
+.tulipan{
+    position:relative;
+    width:160px;
+    height:400px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    animation: flotar 6s ease-in-out infinite;
+}
+
+/* ====== LUZ (SIN CUADRO) ====== */
+.luz{
+    position:absolute;
+    top:-40px;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background: radial-gradient(circle, rgba(255,105,180,0.45) 0%, transparent 70%);
+    z-index:-1;
+}
+
+/* ====== FLOR ====== */
+.flor{
+    position:relative;
+    width:120px;
+    height:150px;
+}
+
+/* pétalo base */
+.petalo{
+    position:absolute;
+    bottom:0;
+    border-radius:60% 60% 40% 40%;
+}
+
+/* centro */
+.p0{
+    left:20px;
+    width:80px;
+    height:140px;
+    background: linear-gradient(180deg,#ffb6d9,#ff4f9a,#c2185b);
+    z-index:3;
+}
+
+/* izquierdo */
+.p1{
+    left:-5px;
+    width:70px;
+    height:130px;
+    background: linear-gradient(180deg,#ffffff,#ffd6e8,#ff9ecf);
+    transform:rotate(-18deg);
+}
+
+/* derecho */
+.p2{
+    right:-5px;
+    width:70px;
+    height:130px;
+    background: linear-gradient(180deg,#ffffff,#ffc1dd,#ff85c1);
+    transform:rotate(18deg);
+}
+
+/* ====== TALLO ====== */
+.tallo{
+    width:14px;
+    height:260px;
+    background: linear-gradient(180deg,#66bb6a,#1b5e20);
+    border-radius:20px;
+    margin-top:-20px;
+}
+
+/* ====== HOJAS BIEN ALINEADAS ====== */
+.hoja{
+    position:absolute;
+    width:110px;
+    height:55px;
+    background: linear-gradient(90deg,#7bd389,#2e7d32);
+    border-radius:100% 0 100% 0;
+}
+
+.hoja1{
+    top:220px;
+    left: -12px;;
+    transform:rotate(-35deg);
+}
+
+.hoja2{
+    top:200px;
+    right: -38px;
+    transform:rotate(35deg);
+}
+
+/* ====== MENSAJE ====== */
+.mensaje{
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: #ffd6e8;
+    text-align: center;
+    opacity: 0;
+    animation: aparecerTexto 2.5s ease-out 1.5s forwards;
+}
+
+/* efecto brillo suave */
+.mensaje span{
+    color: #ff69b4;
+}
+
+/* ====== ANIMACIÓN ====== */
+@keyframes flotar{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0px);}
+}
+@keyframes aparecerTexto{
+    from{
+        opacity:0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Para ti ❤️</h1>
+
+<div class="escena">
+
+    <div class="tulipan">
+
+        <div class="luz"></div>
+
+        <div class="flor">
+            <div class="petalo p1"></div>
+            <div class="petalo p0"></div>
+            <div class="petalo p2"></div>
+        </div>
+
+        <div class="tallo"></div>
+        <div class="hoja hoja1"></div>
+        <div class="hoja hoja2"></div>
+
+        <p class="mensaje">
+    Siempre floreceré <span>para ti</span> 🌷
+</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
